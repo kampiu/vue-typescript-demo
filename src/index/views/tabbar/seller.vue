@@ -12,7 +12,7 @@
         },
     })
     export default class Seller extends Vue {
-        name: String = 'Seller'
+        private name: string = 'Seller';
     }
 </script>
 

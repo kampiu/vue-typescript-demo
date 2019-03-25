@@ -1,5 +1,5 @@
 <template>
-	<div>Admin-Cate</div>
+	<div>Index-Cate</div>
 </template>
 
 
@@ -12,7 +12,7 @@
         },
     })
     export default class Cate extends Vue {
-        name: String = 'Cate'
+        private name: string = 'Cate';
     }
 </script>
 

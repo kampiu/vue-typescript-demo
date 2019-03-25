@@ -22,7 +22,7 @@
     },
   })
   export default class App extends Vue {
-    name: String = 'App'
+      private name: string = 'App';
 
     @commonModule.Mutation('INIT_ROUTER') INIT_ROUTER: any;
 

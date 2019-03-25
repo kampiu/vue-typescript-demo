@@ -12,7 +12,7 @@
         },
     })
     export default class Cart extends Vue {
-        name: String = 'Cart'
+        private name: string = 'Cart';
     }
 </script>
 

@@ -17,7 +17,7 @@
         },
     })
     export default class Views extends Vue {
-		name: String = 'Views'
+        private name: string = 'Views';
     }
 </script>
 

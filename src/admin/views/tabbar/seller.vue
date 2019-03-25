@@ -1,5 +1,5 @@
 <template>
-	<div>Admin-Seller</div>
+	<div>Index-Seller</div>
 </template>
 
 
@@ -12,7 +12,7 @@
         },
     })
     export default class Seller extends Vue {
-        name: String = 'Seller'
+        private name: string = 'Seller';
     }
 </script>
 

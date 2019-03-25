@@ -1,4 +1,10 @@
+const path = require('path')
+const fs = require('fs')
+
+const resolve = (dir) => path.join(__dirname, dir)
+
 module.exports = {
+	lintOnSave: false,
 	pages: {
 		index: {
 			// page 的入口
@@ -32,6 +38,13 @@ module.exports = {
 			// 提取出来的通用 chunk 和 vendor chunk。
 			chunks: ['chunk-vendors', 'chunk-common', 'admin']
 		},
+	},
+	parallel: require('os').cpus().length > 1,
+	chainWebpack: config => {
+		config.resolve.alias
+			.set('@', resolve('src'))
+			.set('_c', resolve('src/components'))
+			.set('_conf', resolve('config'))
 	}
 	// baseUrl  type:{string} default:'/'
 	// 将部署应用程序的基本URL

@@ -34,7 +34,7 @@
         namespace
     } from 'vuex-class';
 
-    const commonModule = namespace('common')
+    const commonModule = namespace('common');
 
     @Component({
         components: {},

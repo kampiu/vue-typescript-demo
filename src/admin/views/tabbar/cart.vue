@@ -1,5 +1,5 @@
 <template>
-	<div>Admin-Cart</div>
+	<div>Index-Cart</div>
 </template>
 
 
@@ -12,7 +12,7 @@
         },
     })
     export default class Cart extends Vue {
-        name: String = 'Cart'
+        private name: string = 'Cart';
     }
 </script>
 

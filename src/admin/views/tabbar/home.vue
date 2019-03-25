@@ -1,5 +1,5 @@
 <template>
-	<div>Admin-Home</div>
+	<div>Index-Home</div>
 </template>
 
 
@@ -12,7 +12,7 @@
         },
     })
     export default class Home extends Vue {
-        name: String = 'Home'
+        private name: string = 'Home';
     }
 </script>
 

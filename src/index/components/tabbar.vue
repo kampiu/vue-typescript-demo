@@ -40,7 +40,7 @@
         components: {},
     })
     export default class TabbarL extends Vue {
-        name: String = "Tabbar";
+        private name: string = "Tabbar";
 
         @State(state => state.common.router) router
         // @commonModule.Getter('router') router

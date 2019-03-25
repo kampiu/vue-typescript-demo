@@ -9,7 +9,7 @@
 
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
-    import Tabbar from '@/components/tabbar.vue';
+    import Tabbar from '@/admin/components/tabbar.vue';
 
     @Component({
         components: {
@@ -17,7 +17,7 @@
         },
     })
     export default class Views extends Vue {
-		name: String = 'Views'
+        private name: string = 'Views';
     }
 </script>
 
