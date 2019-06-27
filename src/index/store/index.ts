@@ -1,15 +1,14 @@
 import Vue from 'vue'
-import Vuex, { StoreOptions } from 'vuex'
-import { RootStateTypes } from './type'
-import { common } from './common'
+import Vuex from 'vuex'
+// import { IAppState } from './modules/app'
+import { IUserState } from '@@/store/modules/userModules'
 
 Vue.use(Vuex)
 
-
-const store: StoreOptions<RootStateTypes> = {
-    modules: {
-        common,
-    },
+export interface IRootState {
+    // app: IAppState
+    user: IUserState
 }
 
-export default new Vuex.Store<RootStateTypes>(store);
+// Declare empty store first, dynamically register all modules later.
+export default new Vuex.Store<IRootState>({})

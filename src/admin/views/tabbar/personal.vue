@@ -1,5 +1,5 @@
 <template>
-	<div>Index-Personal</div>
+	<div>Admin-Personal</div>
 </template>
 
 

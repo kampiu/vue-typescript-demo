@@ -1,7 +1,7 @@
 import Vue from 'vue';
-import App from '@/index/App.vue';
-import router from '@/index/route/index';
-import store from '@/index/store/index';
+import App from '@_I/App.vue';
+import router from '@_I/route/index';
+import store from '@_I/store/index';
 import '@/registerServiceWorker';
 import '@/assets/css/common.less';
 

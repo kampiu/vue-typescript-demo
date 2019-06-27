@@ -44,7 +44,8 @@ module.exports = {
 		config.resolve.alias
 			.set('@', resolve('src'))
 			.set('_c', resolve('src/components'))
-			.set('_conf', resolve('config'))
+			.set('~', resolve('src/index'))
+			.set('@@', resolve('src/admin'))
 	}
 	// baseUrl  type:{string} default:'/'
 	// 将部署应用程序的基本URL

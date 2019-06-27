@@ -1,5 +1,5 @@
 import { Module, GetterTree, MutationTree, ActionTree } from 'vuex'
-import { RootStateTypes } from '@/admin/store/type'
+import { RootStateTypes } from '@/index/store/type'
 
 // 声明state ， 如果是对象或者是数组需要另外对接接口
 // export interface State {

@@ -1,5 +1,5 @@
 <template>
-	<div>Index-Cate</div>
+	<div>Admin-Cate</div>
 </template>
 
 

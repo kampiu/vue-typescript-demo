@@ -1,5 +1,5 @@
 <template>
-	<div>Index-Cart</div>
+	<div>Admin-Cart</div>
 </template>
 
 
