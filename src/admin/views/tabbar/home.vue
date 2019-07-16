@@ -1,7 +1,5 @@
 <template>
-	<div>Admin-Home
-
-	</div>
+	<div>Index-Home</div>
 </template>
 
 

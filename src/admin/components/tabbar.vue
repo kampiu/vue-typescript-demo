@@ -25,24 +25,27 @@
 
 
 <script lang="ts">
-    import {Component, Vue} from "vue-property-decorator";
+    import {Component, Vue} from 'vue-property-decorator';
     import {
         State,
         Getter,
         Action,
         Mutation,
-        namespace
+        namespace,
     } from 'vuex-class';
 
-    const commonModule = namespace('common');
+    const userModule = namespace('user');
 
     @Component({
         components: {},
     })
     export default class TabbarL extends Vue {
-        name: String = "Tabbar";
+        @userModule.State((state) => state.router) public router;
 
-        @State(state => state.common.router) router
+        private name: string = 'Tabbar';
+
+        // @State(state => { return state.common.router }) public router
+        // @State public router: string
         // @commonModule.Getter('router') router
     }
 </script>

@@ -9,11 +9,11 @@
 
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
-    import Tabbar from '@/admin/components/tabbar.vue';
+    import Tabbar from '@/index/components/tabbar.vue';
 
     @Component({
         components: {
-            Tabbar
+            Tabbar,
         },
     })
     export default class Views extends Vue {

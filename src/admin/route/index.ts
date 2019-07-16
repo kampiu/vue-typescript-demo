@@ -1,11 +1,10 @@
 import Vue from 'vue';
 import Router, {RouteConfig} from 'vue-router';
-import Home from '@/admin/views/Home.vue';
 
 Vue.use(Router);
 // 必要时，路由可以按照模块来区分具体的模块
 // 定义主体的路由元信息备注
-const R = (name: string) => () => import(`@/admin/views/${name}.vue`);
+const R = (name: string) => () => import(`@/views/${name}.vue`);
 
 const ROUTESLIST: RouteConfig[] = [
     {
@@ -66,7 +65,7 @@ const createRouter = () => new Router({
         }
     },
     base: process.env.BASE_URL,
-    routes: ROUTESLIST
+    routes: ROUTESLIST,
 })
 
 const router = createRouter()

@@ -4,7 +4,15 @@ const fs = require('fs')
 const resolve = (dir) => path.join(__dirname, dir)
 
 module.exports = {
-	lintOnSave: false,
+	chainWebpack: config => {
+		// console.log(config, 'config')
+		config.resolve.alias
+			// .set('src', resolve('src'))
+			.set('@', resolve('src/index'))
+			// .set('admin', resolve('src/admin'))
+			// .clear()
+	},
+	lintOnSave: true,
 	pages: {
 		index: {
 			// page 的入口
@@ -24,29 +32,22 @@ module.exports = {
 		// 模板会被推导为 `public/subpage.html`
 		// 并且如果找不到的话，就回退到 `public/index.html`。
 		// 输出文件名会被推导为 `subpage.html`。
-		admin: {
-			// page 的入口
-			entry: 'src/admin/main.ts',
-			// 模板来源
-			template: 'public/admin.html',
-			// 在 dist/index.html 的输出
-			filename: 'admin.html',
-			// 当使用 title 选项时，
-			// template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-			title: 'Admin',
-			// 在这个页面中包含的块，默认情况下会包含
-			// 提取出来的通用 chunk 和 vendor chunk。
-			chunks: ['chunk-vendors', 'chunk-common', 'admin']
-		},
+		// admin: {
+		// 	// page 的入口
+		// 	entry: 'src/admin/main.ts',
+		// 	// 模板来源
+		// 	template: 'public/admin.html',
+		// 	// 在 dist/index.html 的输出
+		// 	filename: 'admin.html',
+		// 	// 当使用 title 选项时，
+		// 	// template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
+		// 	title: 'Admin',
+		// 	// 在这个页面中包含的块，默认情况下会包含
+		// 	// 提取出来的通用 chunk 和 vendor chunk。
+		// 	chunks: ['chunk-vendors', 'chunk-common', 'admin']
+		// },
 	},
 	parallel: require('os').cpus().length > 1,
-	chainWebpack: config => {
-		config.resolve.alias
-			.set('@', resolve('src'))
-			.set('_c', resolve('src/components'))
-			.set('~', resolve('src/index'))
-			.set('@@', resolve('src/admin'))
-	}
 	// baseUrl  type:{string} default:'/'
 	// 将部署应用程序的基本URL
 	// 将部署应用程序的基本URL。

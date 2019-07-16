@@ -20,7 +20,7 @@
         Getter,
         Action,
         Mutation,
-        namespace
+        namespace,
     } from 'vuex-class';
 
     export default class HeaderBar extends Vue {

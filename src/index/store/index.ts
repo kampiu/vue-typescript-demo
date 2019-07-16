@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 // import { IAppState } from './modules/app'
-import { IUserState } from '@@/store/modules/userModules'
+import { IUserState } from './modules/userModules'
 
 Vue.use(Vuex)
 

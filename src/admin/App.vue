@@ -11,10 +11,10 @@
     Getter,
     Action,
     Mutation,
-    namespace
+    namespace,
   } from 'vuex-class';
 
-  const commonModule = namespace('common')
+  // const commonModule = namespace('common')
 
   @Component({
     components: {
@@ -22,21 +22,22 @@
     },
   })
   export default class App extends Vue {
+      // @commonModule.Mutation('INIT_ROUTER') INIT_ROUTER: any;
+
       private name: string = 'App';
 
-    @commonModule.Mutation('INIT_ROUTER') INIT_ROUTER: any;
 
-    mounted () {
+    private mounted() {
       this.greet()
     }
 
-    greet(): void{
+    public greet(): void{
 
     }
 
     @Watch('$route.name')
-    onRouterChangeAction(val: string, oldVal: string) {
-      this.INIT_ROUTER(val)
+    private onRouterChangeAction(val: string, oldVal: string) {
+      // this.INIT_ROUTER(val)
     }
 
   }
