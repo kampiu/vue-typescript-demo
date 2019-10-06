@@ -8,15 +8,18 @@ module.exports = {
 		// console.log(config, 'config')
 		config.resolve.alias
 			// .set('src', resolve('src'))
-			.set('@', resolve('src/index'))
+			.set('@', resolve('src'))
 			// .set('admin', resolve('src/admin'))
 			// .clear()
 	},
+	transpileDependencies: [
+		'vuex-module-decorators'
+	],
 	lintOnSave: true,
 	pages: {
 		index: {
 			// page 的入口
-			entry: 'src/index/main.ts',
+			entry: 'src/main.ts',
 			// 模板来源
 			template: 'public/index.html',
 			// 在 dist/index.html 的输出
